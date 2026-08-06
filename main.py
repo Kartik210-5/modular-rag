@@ -4,6 +4,9 @@ from src.vector_store import VectorStoreManager
 from src.retriever import Retriever
 from src.generator import generate_rag_answer
 from src.memory import ConversationMemory
+import logging
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("flashrank").setLevel(logging.WARNING)
 
 def setup_pipeline(pdf_folder: str = "./pdfs"):
     print("\n--- [Phase 1: Initializing RAG Pipeline] ---")

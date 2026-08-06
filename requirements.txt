@@ -2,3 +2,5 @@ ollama
 pydantic
 pypdf 
 chromadb
+flashrank
+logging

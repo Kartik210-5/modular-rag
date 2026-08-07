@@ -1,6 +1,8 @@
 # main.py
 import logging
 
+# source .venv/bin/activate
+
 # Mute HTTP and FlashRank terminal logs
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("flashrank").setLevel(logging.WARNING)

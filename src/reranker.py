@@ -2,21 +2,18 @@
 from typing import List, Dict
 # pyrefly: ignore [missing-import]
 from flashrank import Ranker, RerankRequest
+from config import RERANK_MODEL
 
 class FlashReranker:
-    def __init__(self, model_name: str = "ms-marco-MiniLM-L-12-v2"):
+    def __init__(self, model_name: str = RERANK_MODEL):
         """
-        Initializes FlashRank reranker.
-        'ms-marco-MiniLM-L-12-v2' is ~34MB, highly accurate, and runs 
-        without PyTorch/CUDA dependencies on CPU.
+        Initializes FlashRank reranker using the model specified in config.py.
         """
         self.ranker = Ranker(model_name=model_name)
 
     def rerank(self, query: str, candidate_chunks: List[Dict], top_n: int = 2) -> List[Dict]:
         """
         Re-ranks candidate chunks based on true Cross-Encoder relevance scores.
-        
-        candidate_chunks: List of Dicts [{"text": str, "source": str}]
         """
         if not candidate_chunks:
             return []

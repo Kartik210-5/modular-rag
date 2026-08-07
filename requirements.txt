@@ -1,7 +1,9 @@
 ollama
 pydantic
-pypdf 
+pypdf
 chromadb
 flashrank
 logging
 streamlit
+rank_bm25
+pymupdf4llm

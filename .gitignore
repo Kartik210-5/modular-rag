@@ -3,3 +3,4 @@ src/__pycache__
 .venv
 pdfs
 chroma_db
+extracted_media

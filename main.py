@@ -8,6 +8,8 @@ import logging
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("flashrank").setLevel(logging.WARNING)
 
+# source .venv/bin/activate
+
 def setup_pipeline(pdf_folder: str = "./pdfs"):
     print("\n--- [Phase 1: Initializing RAG Pipeline] ---")
     vector_store = VectorStoreManager()

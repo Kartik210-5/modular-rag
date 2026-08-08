@@ -7,3 +7,5 @@ logging
 streamlit
 rank_bm25
 pymupdf4llm
+uvicorn
+fastapi
